@@ -7,6 +7,8 @@ const authorizedUserIds = [700716730, 1980959278, 1681037361, 5798539346];
 bot.on('photo', async (msg) => {
     try {
         const senderId = msg.from.id;
+        const senderUsername = msg.from.username; // Obtener el nombre de usuario del remitente
+      
       
         // Verificar si el ID del chat del remitente está en la lista blanca
         if (!authorizedUserIds.includes(senderId)) {
@@ -50,6 +52,9 @@ bot.on('photo', async (msg) => {
             id: id,
             photo_id: photoId,
             caption: caption,
+            user_id: senderId, // Añadir el ID del remitente
+            username: senderUsername // Añadir el nombre de usuario del remitente
+        
         };
         jsonData.push(data);
         fs.writeFileSync(file, JSON.stringify(jsonData, null, 2));
