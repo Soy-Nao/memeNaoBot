@@ -1,6 +1,6 @@
 const bot = require("./src/telegram/bot")
 // cargamos los metodos
-//const { searchImages } = require("./src/telegram/inline");
+const { searchImages } = require("./src/telegram/inline");
 require("./src/telegram/message");
 
 // Verificar que el bot se conectó correctamente a la API de Telegram
