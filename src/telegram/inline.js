@@ -2,7 +2,7 @@ const images = require("../assets/data.json");
 const diacritic = require('diacritic');
 const RESULTS_PER_PAGE = 10;
 
-// Función que busca imágenes por término de búsqueda
+// Función que busca imágenes por término de búsqueda si
 
 function searchImages(query, offset) {
     try {
