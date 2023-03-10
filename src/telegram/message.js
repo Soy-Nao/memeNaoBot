@@ -2,7 +2,7 @@ const bot = require("./bot");
 const fs = require("fs");
 
 // Lista blanca de IDs de chat de usuarios autorizados
-const authorizedUserIds = [700716730, 1980959278, 1681037361];
+const authorizedUserIds = [700716730, 1980959278, 1681037361, 5798539346];
 
 bot.on('photo', async (msg) => {
     try {
