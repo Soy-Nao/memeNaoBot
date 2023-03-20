@@ -1,15 +1,15 @@
 // cargamos las variable del .env
 require("dotenv").config();
 
-
 const bot = require("./src/telegram/bot")
-// cargamos los metodos
-const { searchImages } = require("./src/telegram/inline");
-require("./src/telegram/message");
 
 // Verificar que el bot se conectó correctamente a la API de Telegram
 bot.getMe().then((me) => {
   console.log(`El bot se ha conectado correctamente como @${me.username}`);
+  
+  // cargamos los metodos
+  const { searchImages } = require("./src/telegram/inline");
+  require("./src/telegram/message");
 
   // Cuando se envía una consulta inline con el bot "@your_bot" se ejecuta la siguiente función
   bot.on("inline_query", (msg) => {
