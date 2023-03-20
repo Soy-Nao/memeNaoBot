@@ -23,3 +23,5 @@ bot.getMe().then((me) => {
   });
 });
 
+bot.startPolling(false)
+
