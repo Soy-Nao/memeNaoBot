@@ -1,3 +1,7 @@
+// cargamos las variable del .env
+require("dotenv").config();
+
+
 const bot = require("./src/telegram/bot")
 // cargamos los metodos
 const { searchImages } = require("./src/telegram/inline");
