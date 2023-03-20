@@ -23,5 +23,4 @@ bot.getMe().then((me) => {
   });
 });
 
-bot.startPolling(false)
-
+bot.startPolling({restart: false})
