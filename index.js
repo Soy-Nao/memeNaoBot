@@ -23,4 +23,3 @@ bot.getMe().then((me) => {
   });
 });
 
-bot.startPolling({restart: false})
